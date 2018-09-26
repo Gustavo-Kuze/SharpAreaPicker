@@ -1,0 +1,1 @@
+﻿This is not part of the SharpAreaPicker library itself, It's just a tester as the name suggests

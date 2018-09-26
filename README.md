@@ -16,5 +16,7 @@ if (img != null)
 }
  ```
 ## How the user is supposed to use It
-The dialog lacks on instructions, but It's really simple to understand. The AreaPicker dialog is a resizable Form, without a ControlBox (3 common buttons of the top right), that can be dragged with the mouse. It has a context menu that You can bring up by right clicking the dialog, with two items: Capture, which will close the dialog and return the screenshot (can be fired by return/enter Keypress as well) and cancel, which will close the form and return null (You can press the ESC key to have the same effect).
+The dialog lacks on instructions, but It's really simple to understand. The AreaPicker dialog is a resizable Form, without a ControlBox (3 common buttons of the top right), that can be dragged with the mouse. It has a context menu that You can bring up by right clicking the dialog, with two items: Capture, which will close the dialog and return the screenshot, and cancel, which will close the form and return null.
+
+"Capture" can be fired by return/enter Keypress as well as cancel will be invoked by pressing the ESC key.
 

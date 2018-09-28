@@ -14,7 +14,7 @@ namespace SharpAP_Tester
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            Image img = AreaPicker.screenshot();
+            Image img = AreaPicker.screenshot(this);
             if (img != null)
             {
                 picbMain.Image = null;

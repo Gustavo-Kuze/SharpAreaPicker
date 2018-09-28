@@ -41,19 +41,19 @@
             this.cntxCapture,
             this.cntxCancel});
             this.cntxMenuOptions.Name = "cntxMenuOptions";
-            this.cntxMenuOptions.Size = new System.Drawing.Size(181, 70);
+            this.cntxMenuOptions.Size = new System.Drawing.Size(117, 48);
             // 
             // cntxCapture
             // 
             this.cntxCapture.Name = "cntxCapture";
-            this.cntxCapture.Size = new System.Drawing.Size(180, 22);
+            this.cntxCapture.Size = new System.Drawing.Size(116, 22);
             this.cntxCapture.Text = "Capture";
             this.cntxCapture.Click += new System.EventHandler(this.cntxCapture_Click);
             // 
             // cntxCancel
             // 
             this.cntxCancel.Name = "cntxCancel";
-            this.cntxCancel.Size = new System.Drawing.Size(180, 22);
+            this.cntxCancel.Size = new System.Drawing.Size(116, 22);
             this.cntxCancel.Text = "Cancel";
             this.cntxCancel.Click += new System.EventHandler(this.cntxCancel_Click);
             // 
@@ -72,8 +72,11 @@
             this.Name = "AreaPickerDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.Red;
+            this.Activated += new System.EventHandler(this.AreaPickerDialog_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AreaPickerDialog_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AreaPickerDialog_KeyDown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AreaPickerDialog_MouseDown);
             this.cntxMenuOptions.ResumeLayout(false);

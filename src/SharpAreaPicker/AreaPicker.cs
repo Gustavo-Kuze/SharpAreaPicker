@@ -24,6 +24,26 @@ namespace SharpAreaPicker
 
             return selectedAreaTuple;
         }
+        /// <summary>
+        /// Invokes the dialog
+        /// </summary>
+        /// <param name="parent">the parent form to minimize while snipping the screen</param>
+        private static Tuple<Point, Size> show(System.Windows.Forms.Form parent)
+        {
+            Point pickerLocation = new Point();
+            Size pickerSize = new Size();
+            Tuple<Point, Size> selectedAreaTuple = new Tuple<Point, Size>(Point.Empty, Size.Empty);
+
+            Forms.AreaPickerDialog frmAreaPicker = new Forms.AreaPickerDialog(parent);
+            if (frmAreaPicker.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                pickerLocation = frmAreaPicker.Location;
+                pickerSize = frmAreaPicker.Size;
+                selectedAreaTuple = new Tuple<Point, Size>(pickerLocation, pickerSize);
+            }
+
+            return selectedAreaTuple;
+        }
 
 
         /// <summary>
@@ -32,6 +52,21 @@ namespace SharpAreaPicker
         public static Image screenshot()
         {
             var area = show();
+            if (area.Item1 != Point.Empty && area.Item2 != Size.Empty)
+            {
+                return getScreenshotFromSelectedArea(area);
+            }
+            return null;
+        }
+
+
+
+        /// <summary>
+        /// Used to invoke the area picker dialog and get the screenshot
+        /// </summary>
+        public static Image screenshot(System.Windows.Forms.Form parent)
+        {
+            var area = show(parent);
             if (area.Item1 != Point.Empty && area.Item2 != Size.Empty)
             {
                 return getScreenshotFromSelectedArea(area);

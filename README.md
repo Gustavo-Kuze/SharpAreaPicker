@@ -2,7 +2,7 @@
 A (WinForms) .NET plugin library to add snipping dialog to your project
 
 ## How to use It
-1. Download the latest version of SharpAreaPicker dll;
+1. Download the latest version of <a href="https://github.com/Gustavo-Kuze/SharpAreaPicker/releases/download/v1.1/SharpAreaPicker_v1-1.zip">SharpAreaPicker.dll</a>;
 2. Create a new Windows Forms project on your Visual Studio (Community 2017 is the version I use). It has to be pointing to version 4.5.2 or higher of .Net Framework;
 3. Go to solution explorer, right click references and choose add reference. Then under the Assemblies tab, click on the search button and add a reference to the SharpAreaPicker.dll You just downloaded;
 4. Now, You can use get a snip of the screen like:
